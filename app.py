@@ -18,26 +18,19 @@ df = pd.read_csv('datafinal.csv')
 
 available_indicators = df['Indicator Name'].unique()
 
+markdown_text = '''
+### Dash and Markdown
+
+Dash apps can be written in Markdown.
+Dash uses the [CommonMark](http://commonmark.org/)
+specification of Markdown.
+Check out their [60 Second Markdown Tutorial](http://commonmark.org/help/)
+if this is your first introduction to Markdown!
+'''
+
 app.layout = html.Div([
-    dcc.Markdown('''
-    # How the Recession Reshaped the Economy, in 255 Charts
-
-    Five years since the end of the Great Recession,
-    the economy has finally regained the nine million jobs it lost.
-    But not all industries recovered equally.
-    Each line below shows how the number of jobs has changed for
-    a particular industry over the past 10 years.
-    Scroll down to see how the recession reshaped the nation’s job market,
-    industry by industry.
-
-    > This interactive report is a rendition of a
-    > [New York Times original](https://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html).
-    > This app demonstrates how to build high-quality, interactive
-    > reports using the Dash framework in Python.
-
-    ***
-    '''
-    ),
+    
+    dcc.Markdown(children=markdown_text),
         
     html.Div([
 
