@@ -12,15 +12,19 @@ app = dash.Dash(__name__)
 
 server = app.server
 
+app.title = 'pewrks app: Visualizing employment in Canada'
+
 df = pd.read_csv('datafinal.csv')
 
 available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
     
+    html.Img(src='/assets/logo.jpg'),
+    
     dcc.Markdown('''
     ***
-    ## More Bad — and Good — Jobs
+    # the canadian job market, *visually*
     Americans often lament the quality of jobs today, and some
     low-paying industries — like **fast food**, where annual average pay
     is less than $22,000 — are growing.
