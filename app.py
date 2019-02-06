@@ -20,7 +20,7 @@ available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
     
-    html.Img(src='/assets/logo-small.jpg', style={'textAlign': 'center'}),
+    html.Img(src='/assets/logo-small.jpg', style={'margin': 'auto'}),
     
     dcc.Markdown('''
     ***
@@ -89,11 +89,15 @@ app.layout = html.Div([
     html.Div(
     
     dcc.Markdown('''
-    ***
-    pewrks is an aspiring open source project to visualize the data and foster its usage in research and development.
-    the pewrks app is built on python using open source stacks and libraries like dash and flask.
-    ***
     data source: [statistics canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410006301)
+    ***
+    pewrks is an aspiring open source project to visualize the open data and foster its usage in research and development.
+    the pewrks app is built on python using open source stacks and libraries like dash and flask.
+    contact me if you would like to contribute to or sponsor this project.
+    * [github](https://github.com/faazz/)
+    * [linkedin](https://www.linkedin.com/in/farazomar/)
+    * Email: info@pewrks.com
+    ***
     '''.replace('  ', ''), className='container',
     containerProps={'style': {'maxWidth': '650px'}})
     ),
