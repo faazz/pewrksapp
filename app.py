@@ -20,7 +20,7 @@ available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
     
-    html.Img(src='/assets/logo.jpg'),
+    html.Img(src='/assets/logo-small.jpg'),
     
     dcc.Markdown('''
     ***
