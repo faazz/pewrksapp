@@ -25,8 +25,8 @@ app.layout = html.Div([
     ], style={'marginLeft': 0, 'marginRight': 0}),
     
     dcc.Markdown('''
-    ***
     # the canadian job market, *visually*
+    ***
     as part of the [open data initiative](https://open.canada.ca/en), 
     the government publishes high quality data covering several spheres of public life.
     the app is best experienced on desktop. you can choose between the different options to display in the graphs.
