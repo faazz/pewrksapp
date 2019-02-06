@@ -96,7 +96,7 @@ app.layout = html.Div([
     ***
     ### about
     pewrks is an aspiring project to visualize the open data and foster its usage in research and development.
-    the pewrks app is built on python using open source frameworks and libraries like flask and dash.
+    the pewrks app is built on python using open source frameworks and libraries like flask and dash.\
     contact me if you would like to contribute to or sponsor this project.
     * [github](https://github.com/faazz/)
     * [linkedin](https://www.linkedin.com/in/farazomar/)
