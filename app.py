@@ -25,11 +25,9 @@ app.layout = html.Div([
     dcc.Markdown('''
     ***
     # the canadian job market, *visually*
-    Americans often lament the quality of jobs today, and some
-    low-paying industries — like **fast food**, where annual average pay
-    is less than $22,000 — are growing.
-    But so are some high-paying sectors, such as **consulting**,
-    **computing** and **biotech**.
+    as part of the [open data initiative](https://open.canada.ca/en), 
+    the government publishes high quality data covering several spheres of public life.
+    the app is best experienced on desktop. you can choose between the different options to display in the graphs.
     '''.replace('  ', ''), className='container',
     containerProps={'style': {'maxWidth': '650px'}}),
         
@@ -86,7 +84,18 @@ app.layout = html.Div([
         max=df['Year'].max(),
         value=df['Year'].max(),
         marks={str(year): str(year) for year in df['Year'].unique()}
-    ), style={'width': '49%', 'padding': '0px 20px 20px 20px'})
+    ), style={'width': '49%', 'padding': '0px 20px 20px 20px'}),
+    
+    html.Div(
+    
+    dcc.Markdown('''
+    pewrks is an aspiring open source project to visualize the data and foster its usage in research and development.
+    the pewrks app is built on python using open source stacks and libraries like dash and flask.
+    ***
+    data source: [statistics canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410006301)
+    '''.replace('  ', ''), className='container',
+    containerProps={'style': {'maxWidth': '650px'}})
+    ),
 ])
 
 
