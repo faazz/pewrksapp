@@ -58,7 +58,6 @@ pyparsing==2.3.1
 PySocks==1.6.8
 python-dateutil==2.7.5
 pytz==2018.9
-pywin32==223
 pyzmq==17.1.2
 QtAwesome==0.5.6
 qtconsole==4.4.3
@@ -70,8 +69,6 @@ six==1.12.0
 snowballstemmer==1.2.1
 Sphinx==1.8.2
 sphinxcontrib-websupport==1.1.0
-spyder==3.3.2
-spyder-kernels==0.3.0
 testpath==0.4.2
 tornado==5.1.1
 traitlets==4.3.2
