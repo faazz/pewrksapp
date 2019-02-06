@@ -20,7 +20,9 @@ available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
     
-    html.Img(src='/assets/logo-small.jpg', style={'margin': 'auto'}),
+    html.Div([ 
+        html.Img(src='/assets/logo-small.jpg'), 
+    ], style={'marginLeft': 0, 'marginRight': 0}),
     
     dcc.Markdown('''
     ***
@@ -89,6 +91,8 @@ app.layout = html.Div([
     html.Div(
     
     dcc.Markdown('''
+    
+    
     data source: [statistics canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410006301)
     ***
     pewrks is an aspiring open source project to visualize the open data and foster its usage in research and development.
