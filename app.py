@@ -91,10 +91,11 @@ app.layout = html.Div([
     html.Div(
     
     dcc.Markdown('''
-    /
+    \
     data source: [statistics canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410006301)
     ***
-    pewrks is an aspiring open source project to visualize the open data and foster its usage in research and development.
+    ### about
+    pewrks is an aspiring project to visualize the open data and foster its usage in research and development.
     the pewrks app is built on python using open source stacks and libraries like dash and flask.
     contact me if you would like to contribute to or sponsor this project.
     * [github](https://github.com/faazz/)
