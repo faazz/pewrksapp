@@ -18,19 +18,18 @@ df = pd.read_csv('datafinal.csv')
 
 available_indicators = df['Indicator Name'].unique()
 
-markdown_text = '''
-### Dash and Markdown
-
-Dash apps can be written in Markdown.
-Dash uses the [CommonMark](http://commonmark.org/)
-specification of Markdown.
-Check out their [60 Second Markdown Tutorial](http://commonmark.org/help/)
-if this is your first introduction to Markdown!
-'''
-
 app.layout = html.Div([
     
-    dcc.Markdown(children=markdown_text),
+    dcc.Markdown('''
+    ***
+    ## More Bad — and Good — Jobs
+    Americans often lament the quality of jobs today, and some
+    low-paying industries — like **fast food**, where annual average pay
+    is less than $22,000 — are growing.
+    But so are some high-paying sectors, such as **consulting**,
+    **computing** and **biotech**.
+    '''.replace('  ', ''), className='container',
+    containerProps={'style': {'maxWidth': '650px'}}),
         
     html.Div([
 
