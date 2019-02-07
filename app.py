@@ -6,7 +6,7 @@ import dash_html_components as html
 import pandas as pd
 import plotly.graph_objs as go
 from flask import Flask
-
+from flask_caching import Cache
 
 app = dash.Dash(__name__)
 
@@ -17,6 +17,15 @@ app.title = 'pewrks app: Visualizing employment in Canada'
 df = pd.read_csv('datafinal.csv')
 
 available_indicators = df['Indicator Name'].unique()
+
+cache = Cache(app.server, config={
+    # try 'filesystem' if you don't want to setup redis
+    'CACHE_TYPE': 'redis',
+    'CACHE_REDIS_URL': os.environ.get('REDIS_URL', '')
+})
+app.config.suppress_callback_exceptions = True
+
+timeout = 20
 
 app.layout = html.Div([
     
