@@ -20,13 +20,13 @@ df = pd.read_csv('datafinal.csv')
 available_indicators = df['Indicator Name'].unique()
 
 cache = Cache(app.server, config={
-    # try 'filesystem' if you don't want to setup redis
-    'CACHE_TYPE': 'redis',
-    'CACHE_REDIS_URL': os.environ.get('REDIS_URL', '')
+    'CACHE_TYPE': 'filesystem',
+    'CACHE_DIR': 'cache-directory'
 })
-app.config.suppress_callback_exceptions = True
 
-timeout = 20
+TIMEOUT = 60
+
+@cache.memoize(timeout=TIMEOUT)
 
 app.layout = html.Div([
     
