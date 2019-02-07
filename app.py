@@ -1,5 +1,4 @@
 import os
-import datetime
 
 import dash
 import dash_core_components as dcc
@@ -18,15 +17,6 @@ app.title = 'pewrks app: Visualizing employment in Canada'
 df = pd.read_csv('datafinal.csv')
 
 available_indicators = df['Indicator Name'].unique()
-
-cache = Cache(app.server, config={
-    'CACHE_TYPE': 'filesystem',
-    'CACHE_DIR': 'cache-directory'
-})
-
-TIMEOUT = 60
-
-@cache.memoize(timeout=TIMEOUT)
 
 app.layout = html.Div([
     
