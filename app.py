@@ -6,7 +6,6 @@ import dash_html_components as html
 import pandas as pd
 import plotly.graph_objs as go
 from flask import Flask
-from flask_caching import Cache
 
 app = dash.Dash(__name__)
 
